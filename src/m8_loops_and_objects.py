@@ -10,6 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
+import math
 
 
 def main():
@@ -20,6 +21,8 @@ def main():
     print_sequence2(18)
     draw_circles2(18)
     draw_circles3(100)
+    print_cosines(101)
+    draw_cosines_and_sines(101)
 
 
 
@@ -171,7 +174,7 @@ def draw_circles3(n):
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # DONE: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -191,7 +194,7 @@ def draw_circles3(n):
 
 
 
-def print_cosines():
+def print_cosines(n):
     """
     For each of the integers 0  1  2  ... 100,
     prints 80 times the cosine of that integer.
@@ -210,7 +213,7 @@ def print_cosines():
        68.9855097830147
     """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # DONE: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -226,10 +229,11 @@ def print_cosines():
     print('Running print_cosines:')
     print('--------------------------------------------------')
 
+    for k in range(n):
+        print(80*math.cos(k))
 
 
-
-def draw_cosines_and_sines():
+def draw_cosines_and_sines(n):
     """
     -- Constructs a window whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -252,6 +256,18 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow(400,400)
+
+    for k in range(n):
+        x = 200 + (80 * math.cos(k))
+        y = 200 + (80 * math.sin(k))
+        circle = rg.Circle(rg.Point(x,y),10)
+
+        circle.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
 
 
 # -----------------------------------------------------------------------------
