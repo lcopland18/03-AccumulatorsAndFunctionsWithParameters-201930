@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Lauren Copland.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m4t_tester
 
@@ -73,6 +73,26 @@ def run_test_sum_of_digits():
     # Below this comment, add 3 more test cases of your own choosing.
     # -------------------------------------------------------------------------
 
+    #Test 2:
+    expected = 6
+    answer = sum_of_digits(123)
+    print('Test 2 expected',  expected)
+    print('       actual: ', answer)
+
+    #Test 3:
+    expected = 14
+    answer = sum_of_digits(7034)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+
+    #Test 4:
+    expected = 25
+    answer = sum_of_digits(40678)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+
 
 def sum_of_digits(number):
     """
@@ -135,6 +155,23 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    #test1
+    expected = 9
+    answer = digits_in_cube(3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    #test2
+    expected = 10
+    answer = digits_in_cube(4)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    #test3
+    expected = 8
+    answer = digits_in_cube(5)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 def digits_in_cube(n):
     """
