@@ -45,7 +45,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #                You can construct a turtle and an arrow in addition to a circle and a point.
 #
 #          -- Write the names of three METHODs that Circle objects have:
-#                Methods of a circle include attaching it to a rose window,
+#                Methods of a circle include attaching it to a rose window, cloning it, and moving the center.
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
 #             objects have:
