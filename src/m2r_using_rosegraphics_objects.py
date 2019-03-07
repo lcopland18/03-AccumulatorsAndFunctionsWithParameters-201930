@@ -17,7 +17,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              The center of the pop up window
+#              The top left of the pop up window
 #
 #        -- In what direction on the screen
 #           does the positive X-axis point?
@@ -25,7 +25,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #
 #        -- In what direction on the screen
 #           does the positive Y-axis point?
-#             The positive y axis points in the north direction.
+#             The positive y axis points in the south direction.
 #
 #     b. Write a line of code that constructs a RoseWindow object:
 #            window = rg.RoseWindow()
@@ -36,27 +36,27 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #
 #     d. Write a line of code that construct a RoseWindow object
 #        whose height is 100:  (Use the HOVER trick to figure it out)
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#             window = rg.RoseWindow(500, 100)
 #
 #     e. Use the DOT trick to answer the following:
 #
 #          -- Write the names of two types of graphics objects that
 #             you can construct OTHER than Circle and Point:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                You can construct a turtle and an arrow in addition to a circle and a point.
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
 #             objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                Circle have instance variables such as where the center is located, the size of the radius, and the color.
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            It makes the shapes drawn appear on the rose window.
 #
 #     g. When is a RoseWindow close_on_mouse_click method call
 #        necessary?  Why?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            close_on_mouse_click makes the window close after it is clicked on, otherwise it would close right away.
 #
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
