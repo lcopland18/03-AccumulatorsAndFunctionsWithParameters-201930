@@ -82,14 +82,14 @@ def run_test_sum_of_digits():
     #Test 3:
     expected = 14
     answer = sum_of_digits(7034)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
 
     #Test 4:
     expected = 25
     answer = sum_of_digits(40678)
-    print('Test 1 expected:', expected)
+    print('Test 4 expected:', expected)
     print('       actual:  ', answer)
 
 
@@ -130,7 +130,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -164,13 +164,13 @@ def run_test_digits_in_cube():
     #test2
     expected = 10
     answer = digits_in_cube(4)
-    print('Test 1 expected:', expected)
+    print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     #test3
     expected = 8
     answer = digits_in_cube(5)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
 def digits_in_cube(n):
@@ -183,7 +183,7 @@ def digits_in_cube(n):
       this function returns (1 + 2 + 5), which is 8.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -192,7 +192,9 @@ def digits_in_cube(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-
+    cubed = n ** 3
+    ans = sum_of_digits(cubed)
+    return ans
 
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
