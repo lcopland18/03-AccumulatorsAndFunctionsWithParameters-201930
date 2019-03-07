@@ -45,11 +45,11 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #                You can construct a turtle and an arrow in addition to a circle and a point.
 #
 #          -- Write the names of three METHODs that Circle objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                Methods of a circle include attaching it to a rose window,
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
 #             objects have:
-#                Circle have instance variables such as where the center is located, the size of the radius, and the color.
+#                Circle have instance variables such as where the center is located, the size of the radius, and a fill color.
 #
 #     f. What does a RoseWindow RENDER method do?
 #            It makes the shapes drawn appear on the rose window.
