@@ -138,6 +138,7 @@ def draw_circles2(n):
     for k in range(n):
         x = x + 20
         circle = rg.Circle(rg.Point(x,100),10)
+        circle.fill_color = "Blue"
         circle.attach_to(window)
 
     window.render()
