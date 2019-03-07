@@ -14,6 +14,8 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
+    two_circles()
+    circle_and_rectangle()
 
 
 def two_circles():
@@ -27,12 +29,24 @@ def two_circles():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its green doc-string above.
+    # DONE: 2. Implement this function, per its green doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.pdf  lists all legal color-names.
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # -------------------------------------------------------------------------
+
+    window = rg.RoseWindow()
+    nick = rg.Circle(rg.Point(100,100),10)
+    susan = rg.Circle(rg.Point(300,100),50)
+    susan.fill_color = 'midnight blue'
+
+    nick.attach_to(window)
+    susan.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
+
 
 
 def circle_and_rectangle():
@@ -67,7 +81,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # DONE: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -76,6 +90,45 @@ def circle_and_rectangle():
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
 
+    window = rg.RoseWindow()
+
+    xc = 300
+    yc = 100
+
+    x1 = 50
+    y1 = 50
+    x2 = 150
+    y2 = 200
+
+    circle = rg.Circle(rg.Point(xc,yc),50)
+    rectangle = rg.Rectangle(rg.Point(x1,y1), rg.Point(x2,y2))
+
+    circle.fill_color = 'blue'
+
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
+
+    print("Circle Information")
+    print("     The outline thickness is", circle.outline_thickness)
+    print("     The fill color is", circle.fill_color)
+    print("     The center is at point", "(",xc,", ", yc,")")
+    print("     The x coordinate is", xc)
+    print("     The y coordiante is", yc)
+    print("")
+    print("Rectangle Information")
+    print("     The outline thickness is", rectangle.outline_thickness)
+    print("     The fill color is", rectangle.fill_color)
+    print("     The center is at point", "(",(x1+(x2-x1)),", ", (y1+(y2-y1)), ")")
+    print("     The x coordinate is", (x1+(x2-x1)))
+    print("     The y coordiante is", (y1+(y2-y1)))
+#Its outline thickness.
+ #         -- Its fill color.
+  #        -- Its center.
+   #       -- Its center's x coordinate.
+    #      -- Its center's y coordinate.
 
 def lines():
     """
