@@ -16,6 +16,9 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     print_sequence1(20)
+    draw_circles1(21)
+    print_sequence2(18)
+
 
 
 def print_sequence1(n):
@@ -45,7 +48,7 @@ def print_sequence1(n):
         total = total + 10
         print(total)
 
-def draw_circles1():
+def draw_circles1(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
@@ -54,7 +57,7 @@ def draw_circles1():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
@@ -76,7 +79,7 @@ def draw_circles1():
     window.close_on_mouse_click()
 
 
-def print_sequence2():
+def print_sequence2(n):
     """
     Prints:
       50
@@ -88,7 +91,7 @@ def print_sequence2():
       390.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -96,6 +99,12 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
+
+    total = 30
+    for k in range(n):
+        total = total + 20
+        print(total)
+
 
 
 def draw_circles2():
