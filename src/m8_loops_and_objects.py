@@ -18,6 +18,7 @@ def main():
     print_sequence1(20)
     draw_circles1(21)
     print_sequence2(18)
+    draw_circles2(18)
 
 
 
@@ -107,7 +108,7 @@ def print_sequence2(n):
 
 
 
-def draw_circles2():
+def draw_circles2(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -126,6 +127,17 @@ def draw_circles2():
     print('--------------------------------------------------')
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow(400,400)
+
+    x=30
+    for k in range(n):
+        x = x + 20
+        circle = rg.Circle(rg.Point(x,100),10)
+        circle.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
 
 
 def print_sequence3():
