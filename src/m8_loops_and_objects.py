@@ -30,7 +30,7 @@ def print_sequence1(n):
        200
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -63,6 +63,17 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow(400,400)
+
+    radius = 0
+    for k in range(n):
+        circle = rg.Circle(rg.Point(200,200),radius)
+        radius = radius + 10
+        circle.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
 
 
 def print_sequence2():
