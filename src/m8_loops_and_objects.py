@@ -19,6 +19,7 @@ def main():
     draw_circles1(21)
     print_sequence2(18)
     draw_circles2(18)
+    draw_circles3(100)
 
 
 
@@ -119,7 +120,7 @@ def draw_circles2(n):
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -151,7 +152,7 @@ def print_sequence3():
       100.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # DONE: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -161,7 +162,7 @@ def print_sequence3():
     print('--------------------------------------------------')
 
 
-def draw_circles3():
+def draw_circles3(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 300.
     -- Constructs and draws 100 rg.Circle objects such that:
@@ -178,6 +179,16 @@ def draw_circles3():
     print('--------------------------------------------------')
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow(300,300)
+
+    for k in range(n):
+        circle = rg.Circle(rg.Point(200,150),k+1)
+        circle.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
+
 
 
 def print_cosines():
@@ -214,6 +225,8 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
+
+
 
 
 def draw_cosines_and_sines():
